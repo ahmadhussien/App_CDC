@@ -1,0 +1,24 @@
+
+<resources>
+<string name="app_name">App_CDC</string>
+<string name="back"><![CDATA[<-BACK]]></string>
+<string name="mg_m">mg / m²</string>
+<string name="mcg_m">mcg / m²</string>
+<string name="g_m">g / m²</string>
+<string name="weight">Weight:</string>
+<string name="kg">kg</string>
+<string name="ib">Ib</string>
+<string name="dubois">Dubois</string>
+<string name="select_formula">Select Formula:</string>
+<string name="mosteller">Mosteller</string>
+<string name="desired_dose_unit">Desired Dose Unit:</string>
+<string name="result">Result</string>
+<string name="reset">Reset</string>
+<string name="views">views</string>
+<string name="calculate">calculate</string>
+<string name="height">Height</string>
+<string name="bbd">BBD</string>
+<string name="Weight">weight</string>
+<string name="submit">submit</string>
+<string name="registration">registration</string>
+</resources>

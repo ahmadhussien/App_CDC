@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/i10"
+    tools:context=".calculates"
+
+
+    >
+
+    <Button
+        android:id="@+id/b_backC"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="4dp"
+        android:onClick="backc"
+        android:text="Back"
+        android:textColor="#030404"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_Result"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/b_Result"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+
+        android:text="@string/result"
+        android:textColor="#000000"
+        android:textSize="28sp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.143"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_Dose"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <Button
+        android:id="@+id/b_Reset"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="206dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:onClick="reset"
+        android:text="@string/reset"
+        android:textColor="#030404"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/b_backC"
+        app:layout_constraintTop_toBottomOf="@+id/Result"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:id="@+id/Result"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="4dp"
+        android:hint="@string/result"
+        android:textAlignment="center"
+        android:textColor="#F50C0C0C"
+        android:textColorHint="#6A404F"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/b_Result"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_Dose"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/TV_BBD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BSA Based Dose:"
+        android:textColor="#F50C0C0C"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01999998"
+        tools:ignore="HardcodedText,SpUsage" />
+
+    <EditText
+        android:id="@+id/ET_BBD"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/bbd"
+        android:inputType="number"
+        android:textColor="#F5000000"
+        android:textColorHint="#8D6E63"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/TV_BBD"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="LabelFor" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_BBD"
+        android:layout_width="325dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_BBD"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <RadioButton
+            android:id="@+id/BBD_U1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mg_m"
+            android:textColor="#00897B"
+            android:textSize="20sp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <RadioButton
+            android:id="@+id/BBD_U2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mcg_m"
+            android:textColor="#06EA25"
+            android:textSize="20sp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <RadioButton
+            android:id="@+id/BBD_U3"
+            android:layout_width="97dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/g_m"
+            android:textColor="#D50000"
+            android:textSize="20sp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/TV_W"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/weight"
+        android:textColor="#F5000000"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_BBD"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/ET_Weight"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:textColor="#F5000000"
+        android:hint="@string/Weight"
+        android:inputType="number"
+        android:textColorHint="#8D6E63"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/TV_W"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_BBD"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="LabelFor" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_Weight"
+        android:layout_width="325dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_Weight"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <RadioButton
+            android:id="@+id/Weight_U1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/kg"
+            android:textColor="#00BFA5"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/Weight_U2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ib"
+            android:textColor="#64DD17"
+            android:textSize="20sp" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/TV_Height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height:"
+        android:textColor="#F5000000"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_Weight"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/ET_Height"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:textColor="#F5000000"
+        android:inputType="number"
+        android:hint="@string/height"
+        android:textColorHint="#8D6E63"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/TV_Height"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_Weight"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="LabelFor" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_Height"
+        android:layout_width="325dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.03"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ET_Height"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <RadioButton
+            android:id="@+id/Height_U1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="cm"
+            android:textColor="#00BCD4"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/Height_U2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="m"
+            android:textColor="#11E111"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/Height_U3"
+            android:layout_width="97dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="in"
+            android:textColor="#D50000"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/TV_Formula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_formula"
+        android:textColor="#F5000000"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_Height"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_Formula"
+        android:layout_width="373dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_Formula"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <RadioButton
+            android:id="@+id/Formula_U1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dubois"
+            android:textColor="#00BCD4"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/Formula_U2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mosteller"
+            android:textColor="#0BBC0B"
+            android:textSize="20sp" />
+
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/TV_Dose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/desired_dose_unit"
+        android:textColor="#F5000000"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_Formula"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_Dose"
+        android:layout_width="388dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TV_Dose"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <RadioButton
+            android:id="@+id/Dose_U1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="g"
+            android:textColor="#00BCD4"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/Dose_U2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="mg"
+            android:textColor="#09DC09"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:id="@+id/Dose_U3"
+            android:layout_width="97dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="mcg"
+            android:textColor="#D50000"
+            android:textSize="20sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/b_registration"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="4dp"
+        android:onClick="registration"
+        android:text="@string/registration"
+        android:textColor="#030404"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_backC"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
